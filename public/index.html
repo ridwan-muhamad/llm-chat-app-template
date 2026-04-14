@@ -16,12 +16,15 @@
 				--dark:       #1a1207;
 				--dark-2:     #2e1f08;
 				--surface:    #fdf6ee;
-				--surface-2:  #ffffff; /* EDITED: was #fff8f0 */
+				--surface-2:  #ffffff; 
 				--border:     #f0dcc0;
 				--text:       #2e1f08;
 				--text-soft:  #8a6a40;
-				--user-bg:    #ffe0b2;
-				--user-border:#f6a53a;
+				
+				/* DIUBAH: Warna background bubble user dibuat lebih krem/oranye muda agar kontras dengan putih */
+				--user-bg:    #ffe3c2; 
+				--user-border:#f6af58; 
+				
 				--bot-bg:     #f3ece2;
 				--bot-border: #ddc9a8;
 				--green:      #2eb85c;
@@ -56,7 +59,7 @@
 
 			.app-wrapper {
 				width: 100%;
-				max-width: 1536px;
+				max-width: 1280px;
 				padding: 1rem 1rem 2rem;
 				display: flex;
 				flex-direction: column;
@@ -148,7 +151,7 @@
 					0 2px 0 rgba(246,130,31,0.08),
 					0 8px 32px rgba(46,31,8,0.06),
 					inset 0 1px 0 rgba(255,255,255,0.8);
-				min-height: 650px;
+				min-height: 420px;
 			}
 
 			/* ── CHAT TITLE BAR ── */
@@ -291,7 +294,7 @@
 				color: var(--text-soft);
 				font-style: italic;
 				border-top: 1px solid var(--border);
-				background: #ffffff; /* EDITED: was var(--surface) */
+				background: var(--surface-2);
 			}
 
 			.typing-indicator.visible {
@@ -338,7 +341,7 @@
 				font-size: 0.9rem;
 				font-weight: 600;
 				color: var(--text);
-				background: var(--surface);
+				background: var(--surface); 
 				resize: none;
 				min-height: 44px;
 				max-height: 130px;
@@ -411,7 +414,7 @@
 				gap: 6px;
 				padding: 0.6rem 0.75rem;
 				border-top: 1px dashed var(--border);
-				background: #ffffff; /* EDITED: was var(--surface) */
+				background: var(--surface-2); 
 			}
 
 			.quick-btn {
@@ -461,7 +464,6 @@
 
 			<div class="chat-container">
 
-				<!-- Title bar -->
 				<div class="chat-titlebar">
 					<div class="titlebar-dots">
 						<span class="dot-red"></span>
@@ -472,7 +474,6 @@
 					<span class="titlebar-label">rdw-gpt · session aktif</span>
 				</div>
 
-				<!-- Messages -->
 				<div id="chat-messages" class="chat-messages">
 					<div class="message assistant-message">
 						<div class="msg-avatar">🤖</div>
@@ -486,7 +487,6 @@ Inyong siyap mbantu sampeyan sak iso-isone. 😄🔥</p>
 					</div>
 				</div>
 
-				<!-- Typing indicator -->
 				<div class="typing-indicator" id="typing-indicator">
 					<div class="typing-dots">
 						<span></span><span></span><span></span>
@@ -494,7 +494,6 @@ Inyong siyap mbantu sampeyan sak iso-isone. 😄🔥</p>
 					Sek, inyong lagi mikir dhisit...
 				</div>
 
-				<!-- Quick prompts -->
 				<div class="quick-prompts" id="quick-prompts">
 					<button class="quick-btn" onclick="sendQuick(this)">🙋 Halo, Salam kenal!</button>
 					<button class="quick-btn" onclick="sendQuick(this)">💡 Tulung jelasna AI karo inyong</button>
@@ -503,7 +502,6 @@ Inyong siyap mbantu sampeyan sak iso-isone. 😄🔥</p>
 					<button class="quick-btn" onclick="sendQuick(this)">🚀 Tips produktivitas dong</button>
 				</div>
 
-				<!-- Input -->
 				<div class="message-input">
 					<textarea
 						id="user-input"
@@ -553,7 +551,6 @@ Inyong siyap mbantu sampeyan sak iso-isone. 😄🔥</p>
 			}, { once: true });
 		</script>
 
-		<!-- Chat app script -->
 		<script src="chat.js"></script>
 	</body>
 </html>
